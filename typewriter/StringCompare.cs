@@ -35,7 +35,7 @@ namespace typewriter
                 '.',
                 ','
             };
-            string[] firstText = text.Split(separators, SpringSplitOprions.RemoveEmptyEntries);
+            string[] firstText = text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
             string[] secondText = textResult.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 
             for (int index = 0; index < firstText.Length; index++)

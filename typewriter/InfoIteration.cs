@@ -10,7 +10,7 @@ namespace typewriter
         public int MisPrintCount { get; set; }
         public int IndexText { get; set; }
         public TimeSpan Time;
-        private List<Tuple<int, TimeSpan>> Result = new List<Tuple<int, TimeSpan>>();
+        private List<Tuple<int, TimeSpan>> Results = new List<Tuple<int, TimeSpan>>();
 
         public string GetTimeFormated()
         {
@@ -29,7 +29,7 @@ namespace typewriter
 
         public string GetBestTime()
         {
-            var best = Result.First();
+            var best = Results.First();
             
             for (var i = 1; i < Results.Count; i++)
                 if (Results[i].Item1 >= best.Item1 && Results[i].Item2 <= best.Item2)
@@ -41,7 +41,7 @@ namespace typewriter
         
         public string GetWorseTime()
         {
-            var worse = Result.First();
+            var worse = Results.First();
             
             for (var i = 1; i < Results.Count; i++)
                 if (Results[i].Item1 >= worse.Item1 && Results[i].Item2 <= worse.Item2)
