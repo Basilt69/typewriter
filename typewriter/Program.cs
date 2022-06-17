@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Resources;
 
-namespace Homework01
+namespace typewriter
 {
     internal class Program
     {
